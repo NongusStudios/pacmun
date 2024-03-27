@@ -1,0 +1,24 @@
+#!/bin/bash
+if [[ "$1" == "update" ]]; then
+    pacman -Syyu
+elif [[ "$1" == "install" ]]; then
+    pacman -S "${@:2}"
+elif [[ "$1" == "remove" ]]; then
+    pacman -R "${@:2}"
+elif [[ "$1" == "search" ]]; then
+    pacman -Ss "${@:2}"
+elif [[ "$1" == "installed" ]]; then
+    pacman -Q
+fi
+
+if [[ "$1" == "--aur" ]]; then
+    if [[ "$2" == "update" ]]; then
+        yay -Syyu
+    elif [[ "$2" == "install" ]]; then
+        yay -S "${@:3}"
+    elif [[ "$2" == "remove" ]]; then
+        yay -R "${@:3}"
+    elif [[ "$2" == "search" ]]; then
+        yay -Ss "${@:3}"
+    fi
+fi
