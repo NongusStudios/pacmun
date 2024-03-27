@@ -7,5 +7,5 @@ $: sudo pacmun update
 $: sudo pacmun remove nodejs
 $: sudo pacmun search ttf- # searches packages
 $: sudo pacmun installed # shows list of installed packages
-$: sudo pacmun --aur install # you can do these operations with the aur when --aur is provided
+$: pacmun --aur install # you can do these operations with the aur when --aur is provided
 ```
